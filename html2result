@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#result=`cat /Users/Nathan/Desktop/classHtmlStr.txt | grep -A 15 "<td>$1" | sed -n '2p;15p;16p' | grep -A 2 $2 | sed -n '2p;3p'`
+
+result=`cat $3  | grep -i -A 15 "<td>$1" | grep -i -A 15 "$2"|sed -n '14p;15p'| cut -c 6,7`
+
+for i in $result
+do
+	echo "$i"
+done
+
